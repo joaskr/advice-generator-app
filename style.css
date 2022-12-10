@@ -1,0 +1,125 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  font-weight: 800;
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.advice-card {
+  width: 90%;
+  border-radius: 20px;
+  background-color: var(--dark-grayish-blue);
+  padding: 2.188rem 0.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.advice-number {
+  color: var(--neon-green);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.advice-text {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.mobile-divider {
+  margin-bottom: 1.25rem;
+}
+
+.desktop-divider {
+  display: none;
+}
+
+.button {
+  width: 70px;
+  height: 70px;
+  padding: 1.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  background-color: var(--neon-green);
+  border: 1px solid var(--neon-green);
+  position: relative;
+  top: -35px;
+}
+
+.button:hover {
+  -webkit-box-shadow: 0px 0px 48px 0px var(--light-cyan);
+  -moz-box-shadow: 0px 0px 48px 0px var(--light-cyan);
+  box-shadow: 0px 0px 48px 0px var(--light-cyan);
+}
+
+@media only screen and (min-width: 600px) {
+  .advice-card {
+    width: 60%;
+  }
+  .advice-number {
+    font-size: 1rem;
+  }
+
+  .advice-text {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .advice-card {
+    width: 33%;
+    padding: 2.5rem 1rem;
+  }
+
+  .advice-number {
+    font-size: 1rem;
+  }
+
+  .mobile-divider {
+    display: none;
+  }
+
+  .desktop-divider {
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+
+  .advice-text {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+}
